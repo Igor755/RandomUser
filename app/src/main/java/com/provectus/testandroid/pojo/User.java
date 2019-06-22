@@ -1,47 +1,34 @@
 package com.provectus.testandroid.pojo;
 
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Objects;
+import java.util.List;
 
 public class User {
 
-    @SerializedName("name")
+    @SerializedName("results")
     @Expose
-    private String name;
-    @SerializedName("picture")
+    private List<Result> results = null;
+    @SerializedName("info")
     @Expose
-    private String picture;
+    private Info info;
 
-    public User(String picture, String name) {
-        this.picture = picture;
-        this.name = name;
+    public List<Result> getResults() {
+        return results;
     }
 
-    public String getPicture() {
-        return picture;
+    public void setResults(List<Result> results) {
+        this.results = results;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public Info getInfo() {
+        return info;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "photo='" + picture + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+    public void setInfo(Info info) {
+        this.info = info;
     }
 
 }
-

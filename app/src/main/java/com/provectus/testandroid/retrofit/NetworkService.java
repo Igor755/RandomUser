@@ -1,29 +1,30 @@
 package com.provectus.testandroid.retrofit;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
 
-    private static NetworkService mInstance;
     private static final String BASE_URL = "https://randomuser.me/";
-    private Retrofit mRetrofit;
+    private static Retrofit retrofit = null;
 
-    private NetworkService() {
-        mRetrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
 
-    public static NetworkService getInstance() {
-        if (mInstance == null) {
-            mInstance = new NetworkService();
+    public static Retrofit getClient() {
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+
+        if (retrofit==null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
         }
-        return mInstance;
+        return retrofit;
     }
-    public JSONPlaceHolder getJSONApi() {
-        return mRetrofit.create(JSONPlaceHolder.class);
-    }
+
 
 }

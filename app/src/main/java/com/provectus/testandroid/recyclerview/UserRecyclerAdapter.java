@@ -2,113 +2,69 @@
 
 package com.provectus.testandroid.recyclerview;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
+
 import android.content.Context;
-import android.content.DialogInterface;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ImageButton;
+
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.provectus.testandroid.R;
-import com.provectus.testandroid.pojo.User;
-import com.provectus.testandroid.retrofit.NetworkService;
+
+import com.provectus.testandroid.pojo.Result;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
+public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapter.UserViewHolder> {
 
-public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapter.ViewHolder> {
-    private List<User> listItems;
-    private Context mContext;
+    private List<Result> mlist = Collections.emptyList();
 
-
-       public UserRecyclerAdapter(List<User> listItems,Context mContext) {
-           this.listItems = listItems;
-           this.mContext = mContext;
-       }
-
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.one_item_recycler, parent, false);
-        return new ViewHolder(v);
+    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.one_item_recycler, parent, false);
+        return new UserViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-
-
-        final User itemList = listItems.get(position);
-       // holder.imageView.setImageDrawable(itemList.getPhoto());
-        holder.nameUser.setText(itemList.getName());
-
-
-        NetworkService.getInstance()
-                .getJSONApi()
-                .getPostWithID(1)
-                .enqueue(new Callback<User>() {
-                    @Override
-                    public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
-                        User post = response.body();
-
-
-                       // Picasso.with(mContext).load(new File()).into(holder.imageView);
-                        //holder.imageView.append(post.getPicture() + "\n");
-                        holder.nameUser.append(post.getName() + "\n");
-
-                    }
-
-                    @Override
-                    public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-
-                        t.printStackTrace();
-                    }
-                });
-
+    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+        holder.bind(mlist.get(position));
     }
-
 
     @Override
     public int getItemCount() {
-        return listItems.size();
+        return mlist.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    public void setData(List<Result> mlist) {
+        this.mlist = mlist;
+        notifyDataSetChanged();
+    }
 
-        ImageView imageView;
-        TextView nameUser;
+    class UserViewHolder extends RecyclerView.ViewHolder {
 
+      //  private ImageView ivAvatar;
+        private TextView tvName;
 
-        ViewHolder(View itemView) {
+        public UserViewHolder(View itemView) {
             super(itemView);
+           // ivAvatar = itemView.findViewById(R.id.person_photo);
+            tvName = itemView.findViewById(R.id.person_name);
 
-            imageView = (ImageView) itemView.findViewById(R.id.person_photo);
-            nameUser = (TextView) itemView.findViewById(R.id.person_name);
+        }
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int pos = ViewHolder.super.getAdapterPosition();
-                    //itemClickListener.onItemClick(v, pos);
-
-                }
-            });
+        public void bind(Result result) {
+            tvName.setText(result.getName().getFirst());
+            //Picasso.get().load(result.getPicture().getHeight()).fit().into(ivAvatar);
         }
     }
-
 }
