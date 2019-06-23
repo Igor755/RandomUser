@@ -3,7 +3,6 @@
 package com.provectus.testandroid.recyclerview;
 
 
-import android.content.Context;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -35,9 +34,15 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
         return new UserViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+
+
         holder.bind(mlist.get(position));
+
+
     }
 
     @Override
@@ -52,19 +57,23 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
 
     class UserViewHolder extends RecyclerView.ViewHolder {
 
-      //  private ImageView ivAvatar;
+        private ImageView ivAvatar;
         private TextView tvName;
 
         public UserViewHolder(View itemView) {
             super(itemView);
-           // ivAvatar = itemView.findViewById(R.id.person_photo);
+            ivAvatar = itemView.findViewById(R.id.person_photo);
             tvName = itemView.findViewById(R.id.person_name);
 
         }
 
         public void bind(Result result) {
+
+
+            //String r = result.getPicture().getMedium();
+
             tvName.setText(result.getName().getFirst());
-            //Picasso.get().load(result.getPicture().getHeight()).fit().into(ivAvatar);
+            Picasso.get().load(result.getPicture().getLarge()).into(ivAvatar);
         }
     }
 }

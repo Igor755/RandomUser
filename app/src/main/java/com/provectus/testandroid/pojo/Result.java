@@ -1,12 +1,10 @@
 package com.provectus.testandroid.pojo;
 
-import android.graphics.Picture;
 import android.location.Location;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.jar.Attributes;
 
 public class Result {
 
