@@ -16,33 +16,34 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@color/colorPrimary"
             android:id="@+id/imageView"/>
     </LinearLayout>
 
-
+    <!--///////////////////////////////BLOCK1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_lay"
+        android:paddingLeft="40dp"
         android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="wwwwwwwwwwwww" />
+            android:text="Cell" />
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
             android:paddingLeft="4dp">
 
             <EditText
-                android:id="@+id/edit_latitude"
-                android:hint="gfhfhfgh"
+                android:id="@+id/edit_cell"
+                android:hint="cell"
                 android:inputType="textCapWords"
                 android:autofillHints=""
                 android:layout_height="match_parent"
@@ -55,25 +56,312 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
         android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="sdsdsd" />
+            android:text="Dob" />
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
             android:paddingLeft="4dp">
 
             <EditText
-                android:id="@+id/edit_title_marker"
+                android:id="@+id/edit_dob"
                 style="@style/EditorFieldStyle"
-                android:hint="sdsdsdsds"
-                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя"
-                android:maxLength="20"
+                android:hint="dob"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--///////////////////////////////BLOCK3-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="email" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/EditorFieldStyle"
+                android:hint="email"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--///////////////////////////////BLOCK4-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Gender" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_gender"
+                style="@style/EditorFieldStyle"
+                android:hint="gender"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--///////////////////////////////BLOCK5 ID-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Id" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_id"
+                style="@style/EditorFieldStyle"
+                android:hint="dont have id"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--///////////////////////////////BLOCK6-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Location" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_location"
+                style="@style/EditorFieldStyle"
+                android:hint="location"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--///////////////////////////////BLOCK7-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Login" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_login"
+                style="@style/EditorFieldStyle"
+                android:hint="login"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--///////////////////////////////BLOCK8-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Name" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/EditorFieldStyle"
+                android:hint="name"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--///////////////////////////////BLOCK9-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Nat" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_nat"
+                style="@style/EditorFieldStyle"
+                android:hint="nat"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--///////////////////////////////BLOCK10-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Phone" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_phone"
+                style="@style/EditorFieldStyle"
+                android:hint="phone"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--///////////////////////////////BLOCK11-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="Registered" />
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_registered"
+                style="@style/EditorFieldStyle"
+                android:hint="registered"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:autofillHints="" />

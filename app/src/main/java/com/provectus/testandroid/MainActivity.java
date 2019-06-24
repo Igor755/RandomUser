@@ -57,7 +57,20 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this, UserInfoActivity.class);
                             Result m = mlist.get(position);
                             System.out.println(m);
+
+
+                            intent.putExtra("myclass", m);
+
+                            /*m.getPicture().getLarge();
+                            m.getCell();
+                            m.getDob();
+                            m.getEmail();
+                            m.getGender();
+                            m.getId();
+*/
+
                             startActivity(intent);
+
 
 
 

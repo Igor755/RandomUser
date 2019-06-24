@@ -3,7 +3,10 @@ package com.provectus.testandroid.pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Id {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Id implements Serializable {
 
     @SerializedName("name")
     @Expose

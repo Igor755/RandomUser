@@ -1,12 +1,14 @@
 package com.provectus.testandroid.pojo;
 
-import android.location.Location;
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public class Result {
+@SuppressWarnings("serial")
+public class Result implements Serializable {
 
 
     @SerializedName("gender")

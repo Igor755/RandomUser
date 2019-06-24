@@ -4,9 +4,11 @@ package com.provectus.testandroid.pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User {
+@SuppressWarnings("serial")
+public class User implements Serializable {
 
     @SerializedName("results")
     @Expose

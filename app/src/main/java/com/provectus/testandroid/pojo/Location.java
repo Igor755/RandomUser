@@ -3,7 +3,11 @@ package com.provectus.testandroid.pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Location {
+import java.io.Serializable;
+
+
+@SuppressWarnings("serial")
+public class Location implements Serializable {
     @SerializedName("street")
     @Expose
     private String street;

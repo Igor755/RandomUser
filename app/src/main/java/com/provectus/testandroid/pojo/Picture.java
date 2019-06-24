@@ -3,7 +3,10 @@ package com.provectus.testandroid.pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Picture {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Picture implements Serializable {
 
     @SerializedName("large")
     @Expose
