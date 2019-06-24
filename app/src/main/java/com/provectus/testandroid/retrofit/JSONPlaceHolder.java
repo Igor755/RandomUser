@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 public interface JSONPlaceHolder {
 
     @GET("api/")
-    Call<User> fetchUsers(@Query("results")int results);
+    Call<User> getMyJson(@Query("results")int results);
 
 
 
