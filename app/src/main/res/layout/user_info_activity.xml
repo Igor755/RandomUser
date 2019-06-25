@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@android:color/transparent">
+
+<LinearLayout
     android:id="@+id/activity_authentication"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_lay"
-        android:paddingLeft="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -38,8 +42,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_cell"
@@ -58,7 +61,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -69,8 +71,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_dob"
@@ -95,8 +96,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -106,8 +106,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_email"
@@ -130,8 +129,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -141,8 +139,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_gender"
@@ -162,12 +159,10 @@
 
     <!--///////////////////////////////BLOCK5 ID-->
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -177,8 +172,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_id"
@@ -195,13 +189,12 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--///////////////////////////////BLOCK6-->
+    <!--///////////////////////////////BLOCK6 Location-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -211,8 +204,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_location"
@@ -235,8 +227,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -246,8 +237,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_login"
@@ -268,8 +258,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -279,8 +268,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_name"
@@ -301,8 +289,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -312,8 +299,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_nat"
@@ -336,8 +322,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -347,8 +332,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_phone"
@@ -370,8 +354,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="4dp">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
@@ -381,8 +364,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_registered"
@@ -401,3 +383,4 @@
 
 
 </LinearLayout>
+</ScrollView>

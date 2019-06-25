@@ -2,13 +2,11 @@ package com.provectus.testandroid;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.provectus.testandroid.pojo.Result;
 import com.squareup.picasso.Picasso;
@@ -50,10 +48,8 @@ public class UserInfoActivity extends AppCompatActivity {
         edit_registered = (EditText)findViewById(R.id.edit_registered);
         imageView = (ImageView)findViewById(R.id.imageView);
 
-
         Intent i = getIntent();
         Result result = (Result) i.getSerializableExtra("myclass");
-
 
         Uri imgUri=Uri.parse(result.getPicture().getLarge());
 

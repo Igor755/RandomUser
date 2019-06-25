@@ -30,8 +30,7 @@
                 android:layout_alignParentTop="true"
                 android:textSize="30sp"
                 android:text="@string/name_user"/>
-
-
         </RelativeLayout>
+
     </android.support.v7.widget.CardView>
 </LinearLayout>
