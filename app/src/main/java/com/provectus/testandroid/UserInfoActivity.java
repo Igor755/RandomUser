@@ -1,5 +1,6 @@
 package com.provectus.testandroid;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -30,6 +31,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,18 +61,44 @@ public class UserInfoActivity extends AppCompatActivity {
 
 
         edit_cell.setText(result.getCell());
-        edit_dob.setText(result.getDob().getDate());
+
+        edit_dob.setText(getBaseContext().getResources().getString(R.string.date) + " " +
+                result.getDob().getDate() + " " +
+                getBaseContext().getResources().getString(R.string.age) + " " +
+                result.getDob().getAge());
+
         edit_email.setText(result.getEmail());
         edit_gender.setText(result.getGender());
         edit_id.setText(result.getId().getValue());
-        edit_location.setText(result.getLocation().getCity());
+
+        edit_location.setText(getBaseContext().getResources().getString(R.string.city) + " " +
+                result.getLocation().getCity() + " " +
+                getBaseContext().getResources().getString(R.string.state) + " " +
+                result.getLocation().getState());
         edit_login.setText(result.getLogin().getUsername());
-        edit_name.setText(result.getName().getTitle());
+
+        edit_name.setText(getBaseContext().getResources().getString(R.string.title) + " " +
+                result.getName().getTitle() + " " +
+                getBaseContext().getResources().getString(R.string.first) + " " +
+                result.getName().getFirst() + " " +
+                getBaseContext().getResources().getString(R.string.last) + " " +
+                result.getName().getLast());
+
         edit_nat.setText(result.getNat());
         edit_phone.setText(result.getPhone());
         edit_registered.setText(result.getRegistered().getDate());
 
-
+        edit_cell.setFocusable(false);
+        edit_dob.setFocusable(false);
+        edit_email.setFocusable(false);
+        edit_gender.setFocusable(false);
+        edit_id.setFocusable(false);
+        edit_location.setFocusable(false);
+        edit_login.setFocusable(false);
+        edit_name.setFocusable(false);
+        edit_nat.setFocusable(false);
+        edit_phone.setFocusable(false);
+        edit_registered.setFocusable(false);
 
     }
 }

@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">RandomUser</string>
+    <string name="cell">Cell</string>
+    <string name="d_cell">Dont have cell</string>
+    <string name="dob">Dob</string>
+    <string name="d_dob">Dont have dob</string>
+    <string name="email">Email</string>
+    <string name="d_email">Dont have email</string>
+    <string name="gender">Gender</string>
+    <string name="d_gender">Dont have gender</string>
+    <string name="id">Id</string>
+    <string name="d_id">Dont have id</string>
+    <string name="location">Location</string>
+    <string name="d_location">Dont have location</string>
+    <string name="login">Login</string>
+    <string name="d_login">Dont have login</string>
+    <string name="name">Name</string>
+    <string name="d_name">Dont have name</string>
+    <string name="nat">Nat</string>
+    <string name="d_nat">Dont have nat</string>
+    <string name="phone">Phone</string>
+    <string name="d_phone">Dont have phone</string>
+    <string name="registered">Registered</string>
+    <string name="d_registered">Dont have registered</string>
+
+
+
+    <string name="title">Title:</string>
+    <string name="first">First:</string>
+    <string name="last">Last:</string>
+
+
+    <string name="date">Date:</string>
+    <string name="age">Age:</string>
+
+
+
+    <string name="city">City:</string>
+    <string name="state">State:</string>
+
+
+
+    <string name="name_user">name_user</string>
+
+
+
 </resources>

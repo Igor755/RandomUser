@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.provectus.testandroid.myinterface.OnItemClickListener;
 import com.provectus.testandroid.pojo.Result;
@@ -22,9 +23,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.view.View.VISIBLE;
+
 public class MainActivity extends AppCompatActivity {
 
-
+    private ProgressBar progressBar;
     private RecyclerView rvUserList;
     private UserRecyclerAdapter adapter;
 
@@ -34,11 +37,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        progressBar = findViewById(R.id.progressbar);
+        progressBar.setVisibility(VISIBLE);
+
         initial();
 
         rvUserList = (RecyclerView) findViewById(R.id.my_recycler_view);
-
-        //final UserRecyclerAdapter adapter = new UserRecyclerAdapter();
         rvUserList.setLayoutManager(new LinearLayoutManager(this));
 
     }
@@ -50,25 +54,15 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<User> call, Response<User> response) {
                     final List<Result> mlist = response.body().getResults();
+
+                    progressBar.setVisibility(View.INVISIBLE);
                     adapter = new UserRecyclerAdapter(mlist, getBaseContext(), new OnItemClickListener() {
                         @Override
                         public void onItemClick(View view, int position) {
 
                             Intent intent = new Intent(MainActivity.this, UserInfoActivity.class);
                             Result m = mlist.get(position);
-                            System.out.println(m);
-
-
                             intent.putExtra("myclass", m);
-
-                            /*m.getPicture().getLarge();
-                            m.getCell();
-                            m.getDob();
-                            m.getEmail();
-                            m.getGender();
-                            m.getId();
-*/
-
                             startActivity(intent);
 
 
@@ -79,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                     adapter.setData(mlist);
                     rvUserList.setAdapter(adapter);
 
-                   // rvUserList.setOnClickListener(new );
                 }
 
                 @Override

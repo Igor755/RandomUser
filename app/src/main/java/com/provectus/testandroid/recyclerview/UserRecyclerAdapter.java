@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,12 +27,12 @@ import java.util.List;
 
 public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapter.ViewHolder> {
 
-    private List<Result> mlist = Collections.emptyList();
+    private List<Result> mlist;
     public Context mContext;
     private OnItemClickListener itemClickListener;
 
 
-    public UserRecyclerAdapter(List<Result> listItems, Context mContext, OnItemClickListener itemClickListener) {
+    public UserRecyclerAdapter(List<Result> mlist, Context mContext, OnItemClickListener itemClickListener) {
         this.itemClickListener =itemClickListener;
         this.mlist = mlist;
         this.mContext = mContext;
@@ -91,9 +90,6 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
         }
 
         public void bind(Result result) {
-
-
-            //String r = result.getPicture().getMedium();
 
             tvName.setText(result.getName().getFirst());
             Picasso.get().load(result.getPicture().getLarge()).into(ivAvatar);

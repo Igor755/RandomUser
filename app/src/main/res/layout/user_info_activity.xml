@@ -27,15 +27,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_lay"
-        android:paddingLeft="40dp"
+        android:paddingLeft="10dp"
         android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Cell" />
+            android:text="@string/cell" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -43,11 +43,13 @@
 
             <EditText
                 android:id="@+id/edit_cell"
-                android:hint="cell"
-                android:inputType="textCapWords"
+                android:hint="@string/d_cell"
                 android:autofillHints=""
                 android:layout_height="match_parent"
-                android:layout_width="match_parent" />
+                android:layout_width="match_parent"
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -56,15 +58,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="10dp"
         android:orientation="horizontal">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Dob" />
+            android:text="@string/dob" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -73,10 +75,12 @@
             <EditText
                 android:id="@+id/edit_dob"
                 style="@style/EditorFieldStyle"
-                android:hint="dob"
-                android:imeOptions="actionDone"
+                android:hint="@string/d_dob"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -92,14 +96,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="email" />
+            android:text="@string/email" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -108,10 +112,13 @@
             <EditText
                 android:id="@+id/edit_email"
                 style="@style/EditorFieldStyle"
-                android:hint="email"
+                android:hint="@string/d_email"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -124,14 +131,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Gender" />
+            android:text="@string/gender" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -140,10 +147,13 @@
             <EditText
                 android:id="@+id/edit_gender"
                 style="@style/EditorFieldStyle"
-                android:hint="gender"
+                android:hint="@string/d_gender"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -157,14 +167,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Id" />
+            android:text="@string/id" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -173,10 +183,13 @@
             <EditText
                 android:id="@+id/edit_id"
                 style="@style/EditorFieldStyle"
-                android:hint="dont have id"
+                android:hint="@string/d_id"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -188,14 +201,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Location" />
+            android:text="@string/location" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -204,10 +217,13 @@
             <EditText
                 android:id="@+id/edit_location"
                 style="@style/EditorFieldStyle"
-                android:hint="location"
+                android:hint="@string/d_location"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -220,14 +236,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Login" />
+            android:text="@string/login" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -236,10 +252,12 @@
             <EditText
                 android:id="@+id/edit_login"
                 style="@style/EditorFieldStyle"
-                android:hint="login"
-                android:imeOptions="actionDone"
+                android:hint="@string/d_login"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -251,14 +269,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Name" />
+            android:text="@string/name" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -267,10 +285,12 @@
             <EditText
                 android:id="@+id/edit_name"
                 style="@style/EditorFieldStyle"
-                android:hint="name"
-                android:imeOptions="actionDone"
+                android:hint="@string/d_name"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -282,14 +302,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Nat" />
+            android:text="@string/nat" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -298,10 +318,13 @@
             <EditText
                 android:id="@+id/edit_nat"
                 style="@style/EditorFieldStyle"
-                android:hint="nat"
+                android:hint="@string/d_nat"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -314,14 +337,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="10dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Phone" />
+            android:text="@string/phone" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -330,10 +353,13 @@
             <EditText
                 android:id="@+id/edit_phone"
                 style="@style/EditorFieldStyle"
-                android:hint="phone"
+                android:hint="@string/d_phone"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
@@ -345,14 +371,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="40dp">
+        android:paddingLeft="4dp">
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="Registered" />
+            android:text="@string/registered" />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
@@ -361,10 +387,13 @@
             <EditText
                 android:id="@+id/edit_registered"
                 style="@style/EditorFieldStyle"
-                android:hint="registered"
+                android:hint="@string/d_registered"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"/>
 
 
         </LinearLayout>
